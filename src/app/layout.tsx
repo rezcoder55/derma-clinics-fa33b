@@ -14,10 +14,48 @@ const tajawal = Tajawal({
 });
 
 export const metadata: Metadata = {
-  title: "عيادات توجه الطبية | ليزر وعناية بالبشرة",
-  description: "عيادات توجه الطبية في الرياض، مجمع طبي متخصص بمجال التجميل والعناية بالبشرة وإزالة الشعر بالليزر تحت إشراف نخبة من الأطباء.",
+  title: {
+    default: "عيادات توجه الطبية | ليزر وتجميل وعناية بالبشرة",
+    template: "%s | عيادات توجه الطبية"
+  },
+  description: "اكتشف الجمال مع عيادات توجه الطبية في الرياض. مجمع طبي رائد متخصص في إزالة الشعر بالليزر، حقن التجميل، نضارة البشرة، والعناية المتكاملة بأيدي أمهر الأطباء.",
+  keywords: ["ليزر الرياض", "عيادات تجميل", "إزالة الشعر بالليزر", "تجميل الرياض", "عناية بالبشرة", "عيادة توجه", "بوتكس وفيلر"],
+  authors: [{ name: "عيادات توجه الطبية" }],
+  creator: "عيادات توجه الطبية",
+  publisher: "عيادات توجه الطبية",
+  formatDetection: {
+    email: false,
+    address: true,
+    telephone: true,
+  },
+  metadataBase: new URL("https://derma-clinics.netlify.app"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "عيادات توجه الطبية | ليزر وتجميل وعناية بالبشرة",
+    description: "أفضل خدمات الليزر والعناية بالبشرة في الرياض تحت إشراف نخبة من الأطباء المتخصصين.",
+    url: "https://derma-clinics.netlify.app",
+    siteName: "عيادات توجه الطبية",
+    locale: "ar_SA",
+    type: "website",
+    images: [
+      {
+        url: "/logo.svg", // Ideally a specific OG image, but logo is a start
+        width: 800,
+        height: 600,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "عيادات توجه الطبية | ليزر وتجميل وعناية بالبشرة",
+    description: "أفضل خدمات الليزر والعناية بالبشرة في الرياض.",
+    images: ["/logo.svg"],
+  },
   icons: {
     icon: "/logo.svg",
+    apple: "/logo.svg",
   },
 };
 
