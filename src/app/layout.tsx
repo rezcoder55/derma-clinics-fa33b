@@ -60,6 +60,7 @@ export const metadata: Metadata = {
 };
 
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
+import { LoadingScreen } from "@/components/layout/LoadingScreen";
 
 export default function RootLayout({
   children,
@@ -73,6 +74,7 @@ export default function RootLayout({
       className={`${inter.variable} ${tajawal.variable} font-tajawal h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <LoadingScreen />
         {children}
         <ScrollToTop />
       </body>
