@@ -150,7 +150,7 @@ export function HeroCarousel() {
                     <div className="relative aspect-video lg:aspect-4/3 w-full overflow-hidden rounded-3xl bg-secondary shadow-xl border border-border/50">
                       {/* Image Placeholder */}
                       <Image
-                        src="/images/img-1.png"
+                        src="/images/img-1.webp"
                         alt="صورة تجميلية عالية الجودة"
                         fill
                         className="object-cover"
@@ -225,7 +225,7 @@ export function HeroCarousel() {
                     <div className="relative aspect-video lg:aspect-4/3 w-full overflow-hidden rounded-3xl bg-secondary shadow-xl border border-border/50">
                       {/* Image Placeholder */}
                       <Image
-                        src="/images/img-4.png"
+                        src="/images/img-4.webp"
                         alt="صورة العيادة من الداخل"
                         fill
                         className="object-cover"

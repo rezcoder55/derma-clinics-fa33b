@@ -35,7 +35,7 @@ export function QuickBooking() {
             {/* Image Side (Left) */}
             <div className="w-64 h-64 md:w-80 md:h-80 shrink-0 relative drop-shadow-2xl z-10 md:-ml-8 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
               <Image
-                src="/images/phone-3d.png"
+                src="/images/phone-3d.webp"
                 alt="اتصال 3D"
                 fill
                 className="object-contain"
@@ -72,7 +72,7 @@ export function QuickBooking() {
             {/* Image Side (Left) */}
             <div className="w-64 h-64 md:w-80 md:h-80 shrink-0 relative drop-shadow-2xl z-10 md:-ml-8 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
               <Image
-                src="/images/whatsapp-3d.png"
+                src="/images/whatsapp-3d.webp"
                 alt="واتساب 3D"
                 fill
                 className="object-contain"

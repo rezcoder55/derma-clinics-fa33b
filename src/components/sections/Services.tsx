@@ -27,15 +27,7 @@ export function Services() {
         "باستخدام أحدث جهاز ليزر عالمياً (Splendor X) لنتائج فعالة وآمنة على جميع أنواع البشرة.",
       icon: <Sparkles className="h-8 w-8 text-primary" />,
       imageText: "صورة جهاز الليزر",
-      image: "/images/img-6.jpeg",
-    },
-    {
-      title: "العناية بالبشرة",
-      description:
-        "جلسات تنظيف عميق، تقشير، وترطيب باستخدام أرقى المنتجات العالمية لإشراقة لا مثيل لها.",
-      icon: <Flower2 className="h-8 w-8 text-primary" />,
-      imageText: "صورة العناية بالبشرة",
-      image: "/images/img-5.jpeg",
+      image: "/images/img-6.webp",
     },
     {
       title: "تجديد ونضارة البشرة",
@@ -43,7 +35,15 @@ export function Services() {
         "استعيدي حيوية بشرتك مع جلسات التنظيف العميق، التقشير، والترطيب المكثف باستخدام تقنية Hydra Master المتطورة.",
       icon: <Droplets className="h-8 w-8 text-primary" />,
       imageText: "صورة نضارة البشرة",
-      image: "/images/img-2.png",
+      image: "/images/img-5.webp",
+    },
+    {
+      title: "العناية بالبشرة",
+      description:
+        "جلسات تنظيف عميق، تقشير، وترطيب باستخدام أرقى المنتجات العالمية لإشراقة لا مثيل لها.",
+      icon: <Flower2 className="h-8 w-8 text-primary" />,
+      imageText: "صورة العناية بالبشرة",
+      image: "/images/img-2.webp",
     },
     {
       title: "حقن التجميل",
@@ -51,7 +51,7 @@ export function Services() {
         "إجراءات آمنة وفعالة لحقن الفيلر، البوتكس، والميزوثيرابي، بأيدي نخبة من الأطباء المتخصصين.",
       icon: <Syringe className="h-8 w-8 text-primary" />,
       imageText: "صورة حقن التجميل",
-      image: "/images/img-3.png",
+      image: "/images/img-3.webp",
     },
   ];
 
