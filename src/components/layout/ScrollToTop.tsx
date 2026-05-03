@@ -14,8 +14,7 @@ export function ScrollToTop() {
       const height =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
       setScrollProgress(scrolled);
 
       if (winScroll > 300) {

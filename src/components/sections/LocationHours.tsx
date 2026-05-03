@@ -60,13 +60,14 @@ export function LocationHours() {
 
           <div className="relative h-[400px] w-full rounded-3xl overflow-hidden bg-muted shadow-xl border border-border/50">
             <iframe
-              src="https://maps.google.com/maps?q=24.7190687,46.5233872+(عيادات%20توجه%20الطبية)&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.753303102377!2d46.57306667537339!3d24.653564278486047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f1f0046c4e3a7%3A0xb805fd47ea30943b!2z2LnZitin2K_Yp9iqINiq2YjYrNmHINin2YTYt9io2YrYqSAo2KrYrNmF2YrZhCAtINi52YbYp9mK2Kkg2KjYp9mE2KjZitix2KkgLSDZhNmK2LLYsdmKINin2LLYp9mE2Kkg2KfZhNi02LnYsSkg4oat!5e0!3m2!1sar!2seg!4v1714170353457!5m2!1sar!2seg"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              title="موقع عيادات د.ديرما على الخرائط"
               className="absolute inset-0"
             ></iframe>
           </div>

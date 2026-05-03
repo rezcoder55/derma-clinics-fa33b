@@ -4,6 +4,7 @@ import { Services } from "@/components/sections/Services";
 import { LocationHours } from "@/components/sections/LocationHours";
 import { QuickBooking } from "@/components/sections/QuickBooking";
 import { Footer } from "@/components/layout/Footer";
+import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <HeroCarousel />
         <QuickBooking />
         <Services />
+        <Testimonials />
         <LocationHours />
       </main>
       <Footer />

@@ -16,10 +16,19 @@ const tajawal = Tajawal({
 export const metadata: Metadata = {
   title: {
     default: "عيادات توجه الطبية | ليزر وتجميل وعناية بالبشرة",
-    template: "%s | عيادات توجه الطبية"
+    template: "%s | عيادات توجه الطبية",
   },
-  description: "اكتشف الجمال مع عيادات توجه الطبية في الرياض. مجمع طبي رائد متخصص في إزالة الشعر بالليزر، حقن التجميل، نضارة البشرة، والعناية المتكاملة بأيدي أمهر الأطباء.",
-  keywords: ["ليزر الرياض", "عيادات تجميل", "إزالة الشعر بالليزر", "تجميل الرياض", "عناية بالبشرة", "عيادة توجه", "بوتكس وفيلر"],
+  description:
+    "اكتشف الجمال مع عيادات توجه الطبية في الرياض. مجمع طبي رائد متخصص في إزالة الشعر بالليزر، حقن التجميل، نضارة البشرة، والعناية المتكاملة بأيدي أمهر الأطباء.",
+  keywords: [
+    "ليزر الرياض",
+    "عيادات تجميل",
+    "إزالة الشعر بالليزر",
+    "تجميل الرياض",
+    "عناية بالبشرة",
+    "عيادة توجه",
+    "بوتكس وفيلر",
+  ],
   authors: [{ name: "عيادات توجه الطبية" }],
   creator: "عيادات توجه الطبية",
   publisher: "عيادات توجه الطبية",
@@ -34,7 +43,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "عيادات توجه الطبية | ليزر وتجميل وعناية بالبشرة",
-    description: "أفضل خدمات الليزر والعناية بالبشرة في الرياض تحت إشراف نخبة من الأطباء المتخصصين.",
+    description:
+      "أفضل خدمات الليزر والعناية بالبشرة في الرياض تحت إشراف نخبة من الأطباء المتخصصين.",
     url: "https://derma-clinics.netlify.app",
     siteName: "عيادات توجه الطبية",
     locale: "ar_SA",
@@ -73,7 +83,55 @@ export default function RootLayout({
       dir="rtl"
       className={`${inter.variable} ${tajawal.variable} font-tajawal h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalClinic",
+              name: "عيادات د.ديرما",
+              alternateName: "Dr. Derma Clinic",
+              image: "https://derma-clinics.netlify.app/logo.svg",
+              "@id": "https://derma-clinics.netlify.app",
+              url: "https://derma-clinics.netlify.app",
+              telephone: "0545771431",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "شارع الطائف",
+                addressLocality: "ظهرة لبن",
+                addressRegion: "الرياض",
+                addressCountry: "SA",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 24.653564,
+                longitude: 46.573066,
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Saturday",
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                  ],
+                  opens: "10:00",
+                  closes: "22:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Friday",
+                  opens: "15:00",
+                  closes: "21:00",
+                },
+              ],
+            }),
+          }}
+        />
         <LoadingScreen />
         {children}
         <ScrollToTop />
