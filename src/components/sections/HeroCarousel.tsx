@@ -8,32 +8,45 @@ import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-function AnimatedCounter({ end, duration = 2000, suffix = "" }: { end: number, duration?: number, suffix?: string }) {
+function AnimatedCounter({
+  end,
+  duration = 2000,
+  suffix = "",
+}: {
+  end: number;
+  duration?: number;
+  suffix?: string;
+}) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     let startTime: number | null = null;
     let animationFrame: number;
-    
+
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       // easeOutExpo for a really smooth slow down at the end
       const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
       setCount(Math.floor(easeProgress * end));
-      
+
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
       } else {
         setCount(end);
       }
     };
-    
+
     animationFrame = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animationFrame);
   }, [end, duration]);
 
-  return <>{count}{suffix}</>;
+  return (
+    <>
+      {count}
+      {suffix}
+    </>
+  );
 }
 
 export function HeroCarousel() {
@@ -98,7 +111,7 @@ export function HeroCarousel() {
                         مجمع طبي متخصص بمجال التجميل والعناية بالبشرة وليزر
                         ازالة الشعر ، نوفر لكم كادر طبي متميز ومتخصص مع أحدث
                         اجهزة التجميل وليزر ازالة الشعر . نسعي ان تكون عيادات
-                        دكتور ديرما هي وجهتك الاولي للجما
+                        د.ديرما هي وجهتك الاولي للجما
                       </p>
                     </div>
 
@@ -150,7 +163,7 @@ export function HeroCarousel() {
                     <div className="relative aspect-video lg:aspect-4/3 w-full overflow-hidden rounded-3xl bg-secondary shadow-xl border border-border/50">
                       {/* Image Placeholder */}
                       <Image
-                        src="/images/img-1.webp"
+                        src="/images/derma.png"
                         alt="صورة تجميلية عالية الجودة"
                         fill
                         className="object-cover"
@@ -197,10 +210,10 @@ export function HeroCarousel() {
                       </div>
                       <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-foreground leading-tight">
                         عن عيادات <br className="hidden sm:block" />
-                        <span className="text-primary">توجه الطبية</span>
+                        <span className="text-primary">د.ديرما</span>
                       </h2>
                       <p className="text-muted-foreground md:text-lg leading-relaxed max-w-[600px] mx-auto lg:mx-0">
-                        نلتزم في عيادات توجه الطبية بتقديم أحدث التقنيات في مجال
+                        نلتزم في عيادات د.ديرما بتقديم أحدث التقنيات في مجال
                         الليزر والعناية بالبشرة، تحت إشراف طاقم طبي وخبراء تجميل
                         ذوي كفاءة عالية لضمان أفضل النتائج بأعلى معايير السلامة.
                       </p>
@@ -225,7 +238,7 @@ export function HeroCarousel() {
                     <div className="relative aspect-video lg:aspect-4/3 w-full overflow-hidden rounded-3xl bg-secondary shadow-xl border border-border/50">
                       {/* Image Placeholder */}
                       <Image
-                        src="/images/img-4.webp"
+                        src="/images/derma1.png"
                         alt="صورة العيادة من الداخل"
                         fill
                         className="object-cover"

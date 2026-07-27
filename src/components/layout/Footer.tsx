@@ -1,3 +1,4 @@
+import { Logo } from "@/components/ui/Logo";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,17 +11,9 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/logo.svg"
-                alt="عيادات توجه الطبية Logo"
-                width={160}
-                height={50}
-                className="object-contain"
-              />
-            </Link>
+            <Logo className="w-48 h-14" />
             <p className="text-sm text-muted-foreground leading-relaxed">
-              عيادات توجه الطبية، وجهتكم الأولى للجمال والعناية في الرياض. نقدم
+              عيادات د.ديرما، وجهتكم الأولى للجمال والعناية في الرياض. نقدم
               أرقى الخدمات بأحدث التقنيات.
             </p>
           </div>
@@ -125,11 +118,54 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
+        <div className="py-6 border-t border-border/50 flex flex-col items-center justify-center gap-4">
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            {[
+              {
+                name: "Tabby",
+                src: "https://cdn.salla.network/cdn-cgi/image/fit=scale-down,width=58,height=58,onerror=redirect,format=auto/images/payment/tabby_installment_mini.png",
+              },
+              {
+                name: "Tamara",
+                src: "https://cdn.salla.network/cdn-cgi/image/fit=scale-down,width=58,height=58,onerror=redirect,format=auto/images/payment/tamara_installment_mini.png",
+              },
+              {
+                name: "Apple Pay",
+                src: "https://cdn.salla.network/cdn-cgi/image/fit=scale-down,width=58,height=58,onerror=redirect,format=auto/images/payment/apple_pay_mini.png",
+              },
+              {
+                name: "STC Pay",
+                src: "https://cdn.salla.network/cdn-cgi/image/fit=scale-down,width=58,height=58,onerror=redirect,format=auto/images/payment/stc_pay_mini.png",
+              },
+              {
+                name: "Visa",
+                src: "https://cdn.salla.network/cdn-cgi/image/fit=scale-down,width=58,height=58,onerror=redirect,format=auto/images/payment/credit_card_mini.png",
+              },
+              {
+                name: "Mada",
+                src: "https://cdn.salla.network/cdn-cgi/image/fit=scale-down,width=58,height=58,onerror=redirect,format=auto/images/payment/mada_mini.png",
+              },
+            ].map((payment) => (
+              <div
+                key={payment.name}
+                className="relative w-[58px] h-[34px] transition-transform hover:scale-110"
+              >
+                <Image
+                  src={payment.src}
+                  alt={payment.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between text-xs md:text-sm text-muted-foreground/90">
           <p>
-            © {new Date().getFullYear()} عيادات توجه الطبية. جميع الحقوق محفوظة.
+            © {new Date().getFullYear()} عيادات د.ديرما. جميع الحقوق محفوظة.
           </p>
-          <div className="flex gap-4 mt-4 md:mt-0">
+          <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="#" className="hover:text-primary transition-colors">
               الشروط والأحكام
             </Link>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Logo } from "@/components/ui/Logo";
 
 const emptySubscribe = () => () => {};
 
@@ -68,15 +69,7 @@ function MobileDrawer({
 
           {/* Header */}
           <div className="flex items-center justify-between px-5 py-4">
-            <Link href="/" onClick={onClose} className="block">
-              <Image
-                src="/logo.svg"
-                alt="عيادات توجه الطبية"
-                width={120}
-                height={34}
-                className="object-contain"
-              />
-            </Link>
+            <Logo className="w-48 h-14" onClick={onClose} />
             <button
               onClick={onClose}
               className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors"
@@ -162,15 +155,7 @@ export function Header() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/logo.svg"
-                alt="عيادات توجه الطبية Logo"
-                width={160}
-                height={50}
-                className="object-contain"
-              />
-            </Link>
+            <Logo className="w-40 h-12 md:w-48 md:h-14" />
           </div>
 
           <nav className="hidden md:flex items-center gap-8">
