@@ -1,3 +1,7 @@
+# drdermaa
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ae89832d-d34f-4dcd-92d9-caf9694882cf/deploy-status)](https://app.netlify.com/projects/drdermaa/deploys)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
